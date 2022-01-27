@@ -1,0 +1,13 @@
+{
+    "name": "elgentos/magento2-cypress-testing-suite",
+    "description": "A community-driven Cypress testing suite for Magento 2.",
+    "type": "composer-plugin",
+    "authors": [
+        {
+            "name": "Peter Jaap Blaakmeer",
+            "email": "peterjaap@elgentos.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
