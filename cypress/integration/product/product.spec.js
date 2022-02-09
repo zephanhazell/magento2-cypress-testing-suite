@@ -43,7 +43,7 @@ describe("Simple Product test suite", () => {
             .should("be.gte", 1);
     });
 
-    it("Can see breadcrumbs", () => {
+    it("Shows the correct breadcrumbs", () => {
         cy.get(selectors.breadCrumbItems).should("have.length.gte", 2);
     });
 
@@ -119,7 +119,7 @@ describe("Simple Product test suite", () => {
     });
 
     /* This test requires that the existence of an admin token in the cypress.env.json  */
-    // it.only("Can't add an out of stock product to the cart", () => {
+    // it("Can't add an out of stock product to the cart", () => {
     //     Magento2RestApi.updateProductQty(product.outOfStockProductSku, 0);
     //     cy.visit(product.outOfStockProductUrl);
     //     cy.get(selectors.productStockMessage)

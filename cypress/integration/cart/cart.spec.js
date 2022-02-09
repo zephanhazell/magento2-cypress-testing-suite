@@ -43,7 +43,7 @@ describe('Cart tests', () => {
         cy.get(cart.messageToast).should('include.text', 'The coupon code isn\'t valid. Verify the code and try again.').should('be.visible')
     })
 
-    it.only('displays the correct product prices and totals', () => {
+    it('displays the correct product prices and totals', () => {
         cy.visit(cart.url.product1Url)
 
         //check if product price matches with price in cart
