@@ -9,5 +9,18 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "composer-plugin-api": "^2.0"
+    },
+    "require-dev": {
+        "composer/composer": "^2.0"
+    },
+    "extra": {
+        "class": "Elgentos\\Cypress\\Composer\\InstallPlugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Elgentos\\Cypress\\": "src"
+        }
+    }
 }
