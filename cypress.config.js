@@ -19,7 +19,7 @@ const defaultSpecPattern = [
 const baseUrl = process.env.CYPRESS_MAGENTO2_BASE_URL || envConfig.MAGENTO2_BASE_URL || defaultBaseUrl;
 
 module.exports = defineConfig({
-    projectId: "8vuidn",
+    projectId: "oq8ret",
     e2e: {
         baseUrl: baseUrl,
         specPattern: process.env.CYPRESS_MAGENTO2_SPEC_PATTERN || envConfig.MAGENTO2_SPEC_PATTERN || defaultSpecPattern,
