@@ -11,11 +11,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     environment: ci
-    strategy:
-      fail-fast: false
-      matrix:
+    # strategy:
+      # fail-fast: false
+      # matrix:
         # run copies of the current job in parallel
-        containers: [1, 2, 3]
+        # containers: [1, 2, 3]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -25,8 +25,8 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           browser: chrome
-           # record: true
-          parallel: true
+          # record: true
+          # parallel: true
         env:
                     # pass GitHub token to allow accurately detecting a build vs a re-run build
           CYPRESS_VIDEO_UPLOAD_ON_PASSES: 'true'
