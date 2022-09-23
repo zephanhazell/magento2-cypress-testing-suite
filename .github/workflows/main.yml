@@ -25,7 +25,7 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           browser: chrome
-          record: true
+           # record: true
           parallel: true
         env:
                     # pass GitHub token to allow accurately detecting a build vs a re-run build
@@ -34,4 +34,4 @@ jobs:
           CYPRESS_MAGENTO2_SPEC_SUITE: 'hyva'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_MAGENTO2_BASE_URL: 'https://hyva-demo.elgentos.io'
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          # CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
