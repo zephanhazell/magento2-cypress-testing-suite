@@ -4,7 +4,7 @@ const fs = require('fs');
 const envConfig = fs.existsSync('./cypress.env.json') ? require('./cypress.env.json') : {};
 
 // Run "NODE_ENV=develop; npx cypress run" to run tests locally
-const defaultBaseUrl = process.env.NODE_ENV === 'develop' ? 'http://cypress.magento2.localhost' : 'https://example.com/';
+const defaultBaseUrl = process.env.NODE_ENV === 'develop' ? 'http://cypress.magento2.localhost' : 'https://hyva-demo.elgentos.io/';
 
 // Sometimes our local envs are slow due to dev mode. Raising the timeout decreases flakiness
 const defaultCommandTimeout = process.env.NODE_ENV === 'develop' ? 10000 : 4000;
@@ -19,7 +19,7 @@ const defaultSpecPattern = [
 const baseUrl = process.env.CYPRESS_MAGENTO2_BASE_URL || envConfig.MAGENTO2_BASE_URL || defaultBaseUrl;
 
 module.exports = defineConfig({
-    projectId: "8vuidn",
+    projectId: "oq8ret",
     e2e: {
         baseUrl: baseUrl,
         specPattern: process.env.CYPRESS_MAGENTO2_SPEC_PATTERN || envConfig.MAGENTO2_SPEC_PATTERN || defaultSpecPattern,
@@ -28,6 +28,7 @@ module.exports = defineConfig({
         defaultCommandTimeout: parseInt(process.env.CYPRESS_MAGENTO2_DEFAULT_TIMEOUT || envConfig.MAGENTO2_DEFAULT_TIMEOUT || defaultCommandTimeout),
         videoUploadOnPasses: !! (process.env.CYPRESS_VIDEO_UPLOAD_ON_PASSES || envConfig.VIDEO_UPLOAD_ON_PASSES || false),
         watchForFileChanges: false,
+        retries: 3,
         supportFile: 'cypress/support/index.js',
         viewportWidth: 1920,
         viewportHeight: 1080,
